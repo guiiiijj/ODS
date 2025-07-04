@@ -8,6 +8,19 @@
 </head>
 <body>
 
+  <!-- Menu de navegação fixo -->
+  <nav class="menu-navegacao">
+    <ul>
+      <li><a href="#central">Central</a></li>
+      <li><a href="#famosos">Famosos</a></li>
+      <li><a href="#abandono">Abandono</a></li>
+      <li><a href="#mapa">Mapa</a></li>
+      <li><a href="#projeto">Projeto</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- Cabeçalho fixo -->
   <header class="header">
     <h1>Amigo animal na escola</h1>
     <p>Aprendendo a amar e cuidar: o site que conecta você ao mundo animal!</p>
@@ -20,7 +33,7 @@
     </section>
   </main>
 
-  <!-- Cabeçalho -->
+  <!-- Mantido como estava -->
   <header class="header">
     <h1>Amigo animal na escola</h1>
     <p>Aprendendo a amar e cuidar: o site que conecta você ao mundo animal!</p>
@@ -28,7 +41,7 @@
 
   <main>
     <!-- Seção: Central -->
-    <section class="central">
+    <section class="central" id="central">
       <h2>Central de ONGs e Animais Perdidos/Encontrados</h2>
       <p>Este site é para o coração se conectar com os animais e suas famílias.</p>
       <div class="info-box">
@@ -43,33 +56,110 @@
     </section>
 
     <!-- Seção: Famosos -->
-    <section class="famosos">
+    <section class="famosos" id="famosos">
       <h2>Famosos que ajudam nessa causa</h2>
       <div class="card-container">
-        <!-- Repita esse card para 8 famosos -->
+        <!-- 8 cards de famosos -->
         <div class="card">
           <div class="card-inner">
             <div class="card-front">
-              <img src="https://via.placeholder.com/150" alt="Famoso" />
-              <p>Nome do Famoso</p>
+              <img src="https://via.placeholder.com/150" alt="Famoso 1" />
+              <p>Famoso 1</p>
             </div>
             <div class="card-back">
-              <p>Descrição sobre a contribuição do famoso à causa animal.</p>
+              <p>Ajuda com campanhas de adoção.</p>
             </div>
           </div>
         </div>
-        <!-- Repita conforme necessário -->
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="https://via.placeholder.com/150" alt="Famoso 2" />
+              <p>Famoso 2</p>
+            </div>
+            <div class="card-back">
+              <p>Doações frequentes a abrigos.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="https://via.placeholder.com/150" alt="Famoso 3" />
+              <p>Famoso 3</p>
+            </div>
+            <div class="card-back">
+              <p>Divulga animais perdidos em suas redes.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="https://via.placeholder.com/150" alt="Famoso 4" />
+              <p>Famoso 4</p>
+            </div>
+            <div class="card-back">
+              <p>Ativista de proteção animal.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="https://via.placeholder.com/150" alt="Famoso 5" />
+              <p>Famoso 5</p>
+            </div>
+            <div class="card-back">
+              <p>Participa de eventos de adoção.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="https://via.placeholder.com/150" alt="Famoso 6" />
+              <p>Famoso 6</p>
+            </div>
+            <div class="card-back">
+              <p>Mantém abrigo particular.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="https://via.placeholder.com/150" alt="Famoso 7" />
+              <p>Famoso 7</p>
+            </div>
+            <div class="card-back">
+              <p>Patrocina ONGs animais.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="https://via.placeholder.com/150" alt="Famoso 8" />
+              <p>Famoso 8</p>
+            </div>
+            <div class="card-back">
+              <p>Promove adoção responsável.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Seção: Animais Abandonados -->
-    <section class="abandono">
+    <section class="abandono" id="abandono">
       <h2>O problema do abandono animal</h2>
       <p>Milhares de animais são abandonados diariamente. Essa prática é cruel e pode ser combatida com educação, adoção responsável e políticas públicas. Precisamos agir juntos para mudar essa realidade!</p>
+      <p>Você pode ajudar: adote, compartilhe e denuncie maus-tratos!</p>
     </section>
 
     <!-- Seção: Mapa -->
-    <section class="mapa">
+    <section class="mapa" id="mapa">
       <h2>Encontre ONGs de acolhimento em Londrina-PR</h2>
       <iframe 
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14720.025392380768!2d-51.1629528!3d-23.3106559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94eb43a75b843e6b%3A0x4a410c9a689db7a4!2sLondrina%2C%20PR!5e0!3m2!1spt-BR!2sbr!4v1689639473805" 
@@ -77,13 +167,14 @@
     </section>
 
     <!-- Seção: Sobre o Projeto -->
-    <section class="projeto">
+    <section class="projeto" id="projeto">
       <h2>Sobre o Projeto</h2>
       <p>“Amigo Animal na Escola” é um projeto educacional que visa promover empatia, cuidado e responsabilidade com os animais desde cedo. Queremos formar uma geração consciente e atuante no bem-estar animal.</p>
+      <p>O projeto é realizado em parceria com escolas, ONGs e voluntários apaixonados pela causa animal.</p>
     </section>
 
     <!-- Seção: Contato -->
-    <section class="contato">
+    <section class="contato" id="contato">
       <h2>Fale conosco</h2>
       <form>
         <input type="text" placeholder="Seu nome" required />
