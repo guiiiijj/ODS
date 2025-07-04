@@ -52,7 +52,6 @@ body {
 /* === Cabeçalho fixo === */
 .header {
   position: fixed;
-  top: 50px; /* abaixo do menu */
   width: 100%;
   background-color: #3ca858; /* verde forte */
   color: white;
@@ -166,6 +165,7 @@ ul {
 .mapa iframe {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 1400px;
 }
 
 .projeto {
