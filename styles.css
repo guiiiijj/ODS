@@ -13,7 +13,7 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f5fff7;
   color: #2e3d2f;
-  padding-top: 100px; /* Espaço para o cabeçalho fixo */
+  padding-top: 100px; /* espaço para cabeçalho fixo */
   line-height: 1.6;
 }
 
@@ -64,47 +64,107 @@ nav ul li a:hover {
   background-color: #3ca858;
 }
 
-/* === Seções principais === */
+/* === Seções principais com fundo diferenciado e borda arredondada === */
 section {
   max-width: 1100px;
   margin: 40px auto;
-  padding: 20px;
-  background-color: #eaffec;
+  padding: 30px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
+/* Cores específicas para cada seção */
+.central {
+  background-color: #d4f5dd;
+}
+
+#relatos {
+  background-color: #f0fff5;
+}
+
+#educacao {
+  background-color: #d4e9d0;
+}
+
+#animais-vulneraveis {
+  background-color: #e3f5dc;
+}
+
+#servicos {
+  background-color: #c9e9b6;
+}
+
+#projeto {
+  background-color: #b8dfa4;
+}
+
+.encerramento {
+  background-color: #a2cc8a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Títulos das seções */
 h2 {
   text-align: center;
   color: #256d3c;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   font-size: 2rem;
 }
 
+/* Parágrafos */
 p {
   margin-bottom: 15px;
   font-size: 1.1rem;
   text-align: center;
 }
 
-.info-box {
-  background-color: #f0fff5;
-  border-left: 5px solid #3ca858;
-  padding: 20px;
-  border-radius: 8px;
+/* Formulário de cadastro ONG */
+form.form-ong {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form label {
+  font-weight: bold;
+  margin-bottom: 5px;
   font-size: 1rem;
 }
 
-.info-box ul {
-  margin-left: 20px;
-  margin-top: 10px;
+form input[type="text"],
+form textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #a8d5b9;
+  border-radius: 5px;
+  resize: vertical;
 }
 
-.info-box ul li {
-  margin-bottom: 10px;
+form textarea {
+  min-height: 80px;
 }
 
-/* === Botões === */
+form button.botao {
+  background-color: #3ca858;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button.botao:hover {
+  background-color: #2e7b41;
+}
+
+/* Botões gerais */
 .botao {
   display: inline-block;
   background-color: #3ca858;
@@ -123,7 +183,48 @@ p {
   background-color: #2e7b41;
 }
 
-/* === Botão voltar ao topo === */
+/* Galeria de imagens Animais Vulneráveis */
+.galeria-imagens {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.galeria-imagens img {
+  width: 180px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.galeria-imagens img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+}
+
+/* Lista Serviços */
+#servicos ul {
+  list-style-type: disc;
+  margin-left: 30px;
+  font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+  background-color: #256d3c;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+/* Botão voltar ao topo */
 #voltar-topo {
   position: fixed;
   bottom: 30px;
@@ -144,10 +245,10 @@ p {
   background-color: #2e7b41;
 }
 
-/* === Responsividade === */
+/* Responsividade */
 @media (max-width: 768px) {
   body {
-    padding-top: 130px;
+    padding-top: 140px;
   }
 
   .cabecalho {
@@ -164,6 +265,17 @@ p {
 
   section {
     margin: 20px 15px;
-    padding: 15px;
+    padding: 20px;
+  }
+
+  .galeria-imagens img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+
+  form.form-ong {
+    width: 100%;
+    padding: 0 10px;
   }
 }

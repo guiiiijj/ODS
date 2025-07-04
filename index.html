@@ -1,90 +1,116 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Amigo Animal na Escola</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <header class="cabecalho">
-    <img class="logo" src="./img/tulipa-logo.png" alt="Logo da ONG">
-    <nav>
-      <ul class="cabecalho-lista">
-        <li class="cabecalho-lista-item"><a href="#central">Central de ONGs</a></li>
-        <li class="cabecalho-lista-item"><a href="#relatos">Relatos</a></li>
-        <li class="cabecalho-lista-item"><a href="#educacao">Educação</a></li>
-        <li class="cabecalho-lista-item"><a href="#servicos">Serviços</a></li>
-        <li class="cabecalho-lista-item"><a href="#projeto">Projeto</a></li>
-      </ul>
-    </nav>
-  </header>
+<header class="cabecalho">
+  <img class="logo" src="./img/tulipa-logo.png" alt="Logo da ONG" />
+  <nav>
+    <ul class="cabecalho-lista">
+      <li><a href="#central">Central de ONGs</a></li>
+      <li><a href="#relatos">Relatos</a></li>
+      <li><a href="#educacao">Educação</a></li>
+      <li><a href="#animais-vulneraveis">Animais Vulneráveis</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#projeto">Projeto</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <main>
+<main>
 
-    <!-- Central de ONGs -->
-    <section class="central" id="central">
-      <h2>Central de ONGs</h2>
-      <p>Conheça ONGs que atuam em Londrina no acolhimento e cuidado com animais. Cadastre-se e consulte informações completas.</p>
-      <div class="info-box">
-        <h3>Cadastro de ONGs</h3>
-        <p>ONGs podem se cadastrar informando missão, contatos, endereço e área de atuação.</p>
-        <h3>Perfil das ONGs</h3>
-        <p>Visualize perfis com fotos, animais disponíveis para adoção e status.</p>
-        <h3>Animais Perdidos e Encontrados</h3>
-        <p>Consulte ou cadastre animais perdidos e encontrados com ficha e localização aproximada.</p>
-      </div>
-    </section>
+  <!-- Central de ONGs com formulário -->
+  <section class="central" id="central" style="background-color:#d4f5dd; padding: 30px;">
+    <h2>Central de ONGs</h2>
+    <p>Cadastre sua ONG para ajudar na causa dos animais em Londrina e região.</p>
+    <form action="#" method="post" class="form-ong">
+      <label for="nome-ong">Nome da ONG:</label>
+      <input type="text" id="nome-ong" name="nome-ong" placeholder="Digite o nome da ONG" required />
 
-    <!-- Relatos e gestão de dados -->
-    <section id="relatos">
-      <h2>Relatos e Interconexão</h2>
-      <p>Ajude relatando onde viu um animal abandonado ou perdido. Os dados são gerenciados por um sistema com georreferenciamento e bloqueio para evitar duplicações.</p>
-      <p>As informações são cruzadas automaticamente com cadastros e relatos.</p>
-    </section>
+      <label for="missao-ong">Missão da ONG:</label>
+      <textarea id="missao-ong" name="missao-ong" placeholder="Descreva a missão da ONG" required></textarea>
 
-    <!-- Material Didático -->
-    <section id="educacao">
-      <h2>Material Didático Interativo</h2>
-      <div class="info-box">
-        <h3>Para Professores</h3>
-        <p>Acesse planos de aula prontos para trabalhar o tema com seus alunos, com fichas de atividades, exercícios e sugestões de debates.</p>
-        <a href="#" class="botao">Acessar Planos de Aula</a>
-        <h3>Para Alunos</h3>
-        <p>Jogos educativos e filmes sobre respeito e cuidado com os animais, desenvolvidos especialmente para o público de 6 a 14 anos.</p>
-        <a href="#" class="botao">Ver Jogos e Filmes</a>
-      </div>
-    </section>
+      <label for="contato-ong">Contato (telefone, e-mail):</label>
+      <input type="text" id="contato-ong" name="contato-ong" placeholder="Telefone, e-mail ou redes sociais" required />
 
-    <!-- Serviços Importantes -->
-    <section id="servicos">
-      <h2>Serviços e Dicas</h2>
-      <div class="info-box">
-        <ul>
-          <li><strong>Clínicas e Hospitais Veterinários:</strong> locais onde você pode levar animais para atendimento.</li>
-          <li><strong>Empresas Pet-Friendly:</strong> espaços que aceitam animais.</li>
-          <li><strong>Dicas de Cuidados Animais:</strong> alimentação, saúde, banho e vacinas.</li>
-        </ul>
-        <a href="#" class="botao">Ver Lista Completa</a>
-      </div>
-    </section>
+      <label for="endereco-ong">Endereço:</label>
+      <input type="text" id="endereco-ong" name="endereco-ong" placeholder="Rua, número, bairro, cidade" required />
 
-    <!-- Sobre o Projeto -->
-    <section class="projeto" id="projeto">
-      <h2>Sobre o Projeto</h2>
-      <p>“Amigo Animal na Escola” busca reduzir o abandono de animais com educação, informação e ações sociais. Desenvolvido por jovens, o projeto é voltado a crianças de 6 a 14 anos e suas famílias.</p>
-      <p>Unimos escolas, ONGs e voluntários para construir uma comunidade mais consciente.</p>
-    </section>
+      <label for="area-atuacao">Área de atuação:</label>
+      <input type="text" id="area-atuacao" name="area-atuacao" placeholder="Exemplo: Adoção, resgate, conscientização" required />
 
-    <!-- Encerramento -->
-    <section class="encerramento">
-      <h2>Encerramento</h2>
-      <p>Com este site, esperamos conscientizar a sociedade e diminuir os índices de abandono, fortalecendo a vida terrestre com ações locais alinhadas aos princípios da comunidade sustentável.</p>
-    </section>
+      <button type="submit" class="botao">Enviar Cadastro</button>
+    </form>
+  </section>
 
-    <a id="voltar-topo" href="#">⬆ Voltar ao Topo</a>
-  </main>
+  <!-- Relatos e interconexão -->
+  <section id="relatos" style="background-color:#f0fff5; padding: 30px; margin-top: 40px; border-radius: 8px;">
+    <h2>Relatos e Interconexão de Dados</h2>
+    <p>Relate avistamentos de animais perdidos, abandonados ou encontrados. Nosso sistema usa georreferenciamento para mapear e cruzar informações, garantindo uma resposta rápida e eficaz.</p>
+  </section>
+
+  <!-- Material Didático Interativo -->
+  <section id="educacao" style="background-color:#d4e9d0; padding: 30px; margin-top: 40px; border-radius: 8px;">
+    <h2>Material Didático Interativo</h2>
+    <div class="info-box">
+      <h3>Para Professores</h3>
+      <p>Planos de aula detalhados com fichas de atividades, exercícios e sugestões para trabalhar a conscientização sobre os cuidados animais.</p>
+      <a href="#" class="botao">Acessar Planos de Aula</a>
+      <h3>Para Alunos</h3>
+      <p>Jogos e filmes educativos para crianças de 6 a 14 anos, estimulando o respeito e cuidado com os animais.</p>
+      <a href="#" class="botao">Ver Jogos e Filmes</a>
+    </div>
+  </section>
+
+  <!-- Animais Vulneráveis com galeria de imagens -->
+  <section id="animais-vulneraveis" style="background-color:#e3f5dc; padding: 30px; margin-top: 40px; border-radius: 8px;">
+    <h2>Animais Vulneráveis</h2>
+    <p>Conheça alguns dos animais mais vulneráveis que precisam da sua ajuda.</p>
+    <div class="galeria-imagens">
+      <img src="https://via.placeholder.com/180x120?text=Animal+1" alt="Animal Vulnerável 1" />
+      <img src="https://via.placeholder.com/180x120?text=Animal+2" alt="Animal Vulnerável 2" />
+      <img src="https://via.placeholder.com/180x120?text=Animal+3" alt="Animal Vulnerável 3" />
+      <img src="https://via.placeholder.com/180x120?text=Animal+4" alt="Animal Vulnerável 4" />
+      <img src="https://via.placeholder.com/180x120?text=Animal+5" alt="Animal Vulnerável 5" />
+      <img src="https://via.placeholder.com/180x120?text=Animal+6" alt="Animal Vulnerável 6" />
+    </div>
+  </section>
+
+  <!-- Serviços Importantes -->
+  <section id="servicos" style="background-color:#c9e9b6; padding: 30px; margin-top: 40px; border-radius: 8px;">
+    <h2>Serviços e Dicas</h2>
+    <ul>
+      <li><strong>Clínicas e Hospitais Veterinários:</strong> Atendimento e cuidados para seus animais.</li>
+      <li><strong>Empresas Pet-Friendly:</strong> Locais que aceitam e acolhem seus pets com carinho.</li>
+      <li><strong>Dicas de Cuidados:</strong> Alimentação, vacinação, banho e primeiros socorros.</li>
+    </ul>
+    <a href="#" class="botao">Ver Lista Completa</a>
+  </section>
+
+  <!-- Sobre o Projeto -->
+  <section id="projeto" style="background-color:#b8dfa4; padding: 30px; margin-top: 40px; border-radius: 8px;">
+    <h2>Sobre o Projeto</h2>
+    <p>“Amigo Animal na Escola” busca reduzir o abandono de animais com ações educativas, sociais e ambientais, focadas em crianças de 6 a 14 anos, escolas, ONGs e comunidade.</p>
+    <p>Unimos forças para formar uma geração mais consciente e responsável pelo cuidado animal.</p>
+  </section>
+
+  <!-- Encerramento -->
+  <section class="encerramento" style="background-color:#a2cc8a; padding: 20px; margin-top: 40px; text-align: center; border-radius: 8px; color: white;">
+    <p>Juntos podemos construir uma sociedade que respeita e protege nossos amigos animais. Conte conosco!</p>
+  </section>
+
+</main>
+
+<footer style="background-color:#256d3c; color:white; text-align:center; padding:15px 0; font-weight:bold; margin-top: 40px;">
+  ThackathOn
+</footer>
+
+<a id="voltar-topo" href="#">⬆ Voltar ao Topo</a>
 
 </body>
 </html>
