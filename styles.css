@@ -1,303 +1,489 @@
 /* Reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f5fff7;
-  color: #2e3d2f;
-  padding-top: 100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7; /* Aumentei um pouco o line-height para melhor leitura */
+    background: linear-gradient(to bottom right, #f5fff7, #e0f2e0); /* Gradiente de fundo */
+    color: #2e3d2f;
+    padding-top: 100px;
 }
 
 /* Cabeçalho fixo */
 .cabecalho {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #256d3c;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  z-index: 1000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(to right, #256d3c, #3ca858); /* Gradiente no cabeçalho */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Sombra mais pronunciada */
+    z-index: 1000;
 }
 
 .header {
-  max-width: 1100px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
 }
 
 .logo {
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  box-shadow: 0 0 10px #bfe79f;
-  transition: box-shadow 0.5s ease;
+    width: 60px; /* Levemente maior */
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px #bfe79f; /* Sombra mais vibrante */
+    transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1); /* Transição mais suave */
 }
 
 .logo:hover {
-  box-shadow: 0 0 20px #a8d692;
+    box-shadow: 0 0 25px #a8d692, 0 0 40px #bfe79f; /* Efeito hover mais intenso */
+    transform: rotate(5deg) scale(1.05); /* Pequena rotação e escala */
 }
 
 .cabecalho-lista {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+    list-style: none;
+    display: flex;
+    gap: 25px; /* Espaçamento maior entre os itens */
 }
 
 .cabecalho-lista li a {
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+    color: white;
+    font-weight: 600; /* Levemente mais negrito */
+    text-decoration: none;
+    padding: 10px 15px; /* Padding maior */
+    border-radius: 25px; /* Bordas mais arredondadas para um visual de pílula */
+    transition: all 0.4s ease-in-out; /* Transição mais suave */
+    position: relative;
+    overflow: hidden; /* Para o efeito de "passar por cima" */
+}
+
+.cabecalho-lista li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2); /* Efeito de brilho */
+    transition: all 0.4s ease-in-out;
+    transform: skewX(-20deg);
+}
+
+.cabecalho-lista li a:hover::before {
+    left: 100%;
 }
 
 .cabecalho-lista li a:hover {
-  background-color: #3ca858;
+    background-color: #3ca858;
+    transform: translateY(-3px); /* Pequeno levantamento no hover */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Sombra ao levantar */
 }
 
 /* === Mapa === */
 .mapa iframe {
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  width: 100%;
+    border-radius: 15px; /* Mais arredondado */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Sombra mais forte */
+    width: 100%;
+    border: none; /* Remover borda padrão do iframe */
 }
 
 /* Seções */
 section {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    max-width: 1100px;
+    margin: 60px auto; /* Espaçamento maior entre as seções */
+    padding: 40px; /* Padding maior */
+    border-radius: 12px; /* Bordas mais arredondadas */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1); /* Sombra mais suave e espalhada */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* === Sessões visuais com imagem === */
-.abandono-imagens img,
-.integrantes img {
-  width: 100%;
-  max-width: 180px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-  transition: transform 0.3s;
+section:hover {
+    transform: translateY(-5px); /* Efeito de levantar ao passar o mouse */
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15); /* Sombra mais intensa no hover */
 }
 
-.abandono-imagens img:hover,
-.integrantes img:hover {
-  transform: scale(1.05);
+/* Cores de fundo com gradientes */
+.central { background: linear-gradient(to right, #d4f5dd, #e9f9ed); }
+.relatos { background: linear-gradient(to left, #f0fff5, #e0f8e5); }
+.educacao {
+    background: linear-gradient(to right, #d4e9d0, #e8f5e5);
+    display: flex; /* Para os info-boxes ficarem lado a lado */
+    flex-wrap: wrap; /* Quebra de linha em telas menores */
+    justify-content: space-around;
+    gap: 30px; /* Espaçamento entre os boxes */
 }
-
-/* Cores de fundo diferentes */
-.central { background-color: #d4f5dd; }
-.relatos { background-color: #f0fff5; }
-.educacao { background-color: #d4e9d0; }
-.animais-vulneraveis { background-color: #e3f5dc; }
-.servicos { background-color: #c9e9b6; }
-.mapa { background-color: #b8dfa4; }
-.projeto { background-color: #a2cc8a; }
+.animais-vulneraveis { background: linear-gradient(to left, #e3f5dc, #f0fbe8); }
+.servicos { background: linear-gradient(to right, #c9e9b6, #e0f2d5); }
+.mapa { background: linear-gradient(to left, #b8dfa4, #d0edd0); }
+.projeto { background: linear-gradient(to right, #ffffff, #f7fcf7); }
 .encerramento {
-  background-color: #256d3c;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  font-weight: bold;
+    background: linear-gradient(to right, #256d3c, #3ca858); /* Gradiente */
+    color: white;
+    text-align: center;
+    padding: 30px; /* Padding maior */
+    font-weight: bold;
+    margin-top: 60px; /* Margem superior maior */
+    border-radius: 12px; /* Bordas arredondadas */
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.2); /* Sombra superior */
 }
 
 /* Títulos */
 h2 {
-  color: #256d3c;
-  text-align: center;
-  margin-bottom: 25px;
-  font-size: 2rem;
+    color: #1a522d; /* Cor mais escura para contraste */
+    text-align: center;
+    margin-bottom: 35px; /* Margem maior */
+    font-size: 2.5rem; /* Fonte maior */
+    font-weight: 700; /* Mais negrito */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Pequena sombra no texto */
+}
+
+h3 {
+    color: #2e7b41; /* Cor para subtítulos */
+    margin-bottom: 15px;
+    font-size: 1.8rem;
 }
 
 /* Parágrafos */
 p {
-  margin-bottom: 15px;
-  font-size: 1.1rem;
-  text-align: center;
+    margin-bottom: 20px; /* Margem maior */
+    font-size: 1.15rem; /* Fonte um pouco maior */
+    text-align: center;
+    color: #4a5d4b; /* Cor mais suave */
 }
 
 /* Formulário ONG */
 form.form-ong {
-  max-width: 700px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  font-size: 1rem;
+    max-width: 750px; /* Largura um pouco maior */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Espaçamento maior entre os campos */
+    font-size: 1.05rem;
+    padding: 30px; /* Adicionado padding ao formulário */
+    border-radius: 10px;
+    background-color: #f7fdf7; /* Fundo suave para o formulário */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Sombra mais sutil */
 }
 
 .form-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Min-width ajustado */
+    gap: 25px;
 }
 
 form label {
-  font-weight: 600;
-  margin-bottom: 6px;
-  display: block;
-  color: #256d3c;
+    font-weight: 700; /* Mais negrito */
+    margin-bottom: 8px; /* Margem maior */
+    display: block;
+    color: #1a522d; /* Cor mais escura */
 }
 
 form input[type="text"],
 form textarea {
-  width: 100%;
-  padding: 10px 12px;
-  border: 1.8px solid #a8d5b9;
-  border-radius: 8px;
-  font-size: 1rem;
-  transition: border-color 0.3s ease;
-  resize: vertical;
+    width: 100%;
+    padding: 12px 15px; /* Padding maior */
+    border: 2px solid #a8d5b9; /* Borda mais pronunciada */
+    border-radius: 10px; /* Mais arredondado */
+    font-size: 1.05rem;
+    transition: all 0.3s ease; /* Transição para todas as propriedades */
+    resize: vertical;
 }
 
 form input[type="text"]:focus,
 form textarea:focus {
-  border-color: #3ca858;
-  outline: none;
-  box-shadow: 0 0 6px #3ca858;
+    border-color: #3ca858;
+    outline: none;
+    box-shadow: 0 0 10px rgba(60, 168, 88, 0.4); /* Sombra mais destacada */
+    background-color: #f0fff0; /* Fundo leve ao focar */
 }
 
 form button.botao {
-  background-color: #3ca858;
-  color: white;
-  border: none;
-  padding: 12px;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+    background: linear-gradient(to right, #3ca858, #2e7b41); /* Gradiente no botão */
+    color: white;
+    border: none;
+    padding: 15px 25px; /* Padding maior */
+    font-weight: bold;
+    border-radius: 8px; /* Mais arredondado */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px; /* Espaçamento entre letras */
 }
 
 form button.botao:hover {
-  background-color: #2e7b41;
+    background: linear-gradient(to left, #2e7b41, #1a522d); /* Gradiente reverso no hover */
+    transform: translateY(-2px); /* Efeito de levantar */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2); /* Sombra no hover */
 }
 
 /* Botões gerais */
 .botao {
-  display: inline-block;
-  background-color: #3ca858;
-  color: white !important;
-  padding: 10px 20px;
-  margin: 10px auto 0 auto;
-  border-radius: 5px;
-  font-weight: bold;
-  text-align: center;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background-color 0.3s;
+    display: block; /* Mudei para block para centralizar com margin: auto */
+    background: linear-gradient(to right, #3ca858, #2e7b41);
+    color: white !important;
+    padding: 12px 25px;
+    margin: 25px auto 0 auto; /* Ajuste para centralizar */
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra padrão */
 }
 
 .botao:hover {
-  background-color: #2e7b41;
+    background: linear-gradient(to left, #2e7b41, #1a522d);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
 }
 
 /* Galeria de imagens */
-.galeria-imagens {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 20px;
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px; /* Espaçamento maior entre os cards */
+    margin-top: 30px;
 }
 
-.galeria-imagens img {
-  width: 180px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-  transition: transform 0.3s;
-  cursor: pointer;
+.image-card {
+    background-color: white;
+    border-radius: 15px; /* Mais arredondado */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1); /* Sombra mais pronunciada */
+    overflow: hidden; /* Garante que a imagem respeite o border-radius */
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s ease;
+    width: 220px; /* Largura fixa para os cards */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px; /* Padding interno */
 }
 
-.galeria-imagens img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+.image-card:hover {
+    transform: translateY(-10px) scale(1.03); /* Levanta e aumenta um pouco */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25); /* Sombra bem mais forte no hover */
 }
+
+.image-card img {
+    width: 100%;
+    height: 150px; /* Altura fixa para as imagens */
+    object-fit: cover;
+    border-radius: 10px; /* Bordas arredondadas para a imagem dentro do card */
+    transition: transform 0.4s ease;
+}
+
+.image-card:hover img {
+    transform: scale(1.05); /* Zoom na imagem ao passar o mouse no card */
+}
+
+/* Info Boxes (para Educação) */
+.info-box {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    flex: 1; /* Permite que os boxes se expandam igualmente */
+    min-width: 300px; /* Garante um tamanho mínimo */
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s ease;
+}
+
+.info-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+}
+
+.box-gradient {
+    background: linear-gradient(to bottom right, #e8fff0, #d0edd0); /* Gradiente suave */
+}
+.box-gradient:hover {
+    background: linear-gradient(to top left, #d0edd0, #e8fff0); /* Gradiente reverso no hover */
+}
+
 
 /* Lista serviços */
 .servicos ul {
-  list-style-type: disc;
-  margin-left: 30px;
-  font-size: 1.1rem;
+    list-style-type: none; /* Removendo os marcadores padrão */
+    padding: 0;
+    margin-left: 0;
+    text-align: center; /* Centraliza o texto da lista */
 }
+
+.servicos ul li {
+    background-color: #f0fff5; /* Fundo para cada item da lista */
+    margin-bottom: 10px; /* Espaço entre os itens */
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    padding-left: 40px; /* Espaço para o ícone customizado */
+    text-align: left; /* Alinha o texto à esquerda dentro do item */
+}
+
+.servicos ul li::before {
+    content: '🐾'; /* Ícone de pata como marcador */
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #3ca858;
+    font-size: 1.2rem;
+}
+
+.servicos ul li:hover {
+    background-color: #e3f5e3;
+    transform: translateX(5px); /* Desliza um pouco para a direita no hover */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
 
 /* Footer */
 footer {
-  background-color: #256d3c;
-  color: white;
-  text-align: center;
-  padding: 15px 0;
-  font-weight: bold;
-  margin-top: 40px;
+    background-color: #256d3c;
+    color: white;
+    text-align: center;
+    padding: 20px 0; /* Padding maior */
+    font-weight: 600; /* Levemente mais negrito */
+    margin-top: 50px; /* Margem superior maior */
+    box-shadow: 0 -3px 10px rgba(0,0,0,0.1); /* Sombra superior */
 }
 
 /* Botão voltar ao topo */
 #voltar-topo {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background-color: #3ca858;
-  color: white;
-  padding: 12px 15px;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  text-decoration: none;
-  z-index: 1100;
-  transition: background-color 0.3s;
+    position: fixed;
+    bottom: 35px; /* Levemente mais alto */
+    right: 35px; /* Levemente mais para a direita */
+    background: linear-gradient(to top left, #3ca858, #2e7b41); /* Gradiente */
+    color: white;
+    padding: 15px 18px; /* Padding maior */
+    border-radius: 50%; /* Torna o botão redondo */
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3); /* Sombra mais pronunciada */
+    text-decoration: none;
+    z-index: 1100;
+    transition: all 0.4s ease;
+    font-size: 1.5rem; /* Ícone maior */
+    display: flex; /* Para centralizar o ícone */
+    justify-content: center;
+    align-items: center;
 }
 
 #voltar-topo:hover {
-  background-color: #2e7b41;
+    background: linear-gradient(to bottom right, #2e7b41, #1a522d); /* Gradiente reverso */
+    transform: translateY(-5px) scale(1.1); /* Levanta e aumenta */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
 /* Responsividade */
+@media (max-width: 900px) {
+    section {
+        padding: 30px;
+    }
+    .educacao {
+        flex-direction: column; /* Pilha os info-boxes em telas menores */
+        align-items: center;
+    }
+    .info-box {
+        min-width: unset; /* Remove o min-width para seções empilhadas */
+        width: 90%; /* Ocupa quase toda a largura */
+    }
+}
+
 @media (max-width: 768px) {
-  body {
-    padding-top: 140px;
-  }
+    body {
+        padding-top: 150px; /* Ajuste para o cabeçalho maior */
+    }
 
-  .header {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    padding: 15px 20px;
-  }
+    .header {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px; /* Aumentei o gap */
+        padding: 15px 20px;
+    }
 
-  .cabecalho-lista {
-    flex-direction: column;
-    gap: 10px;
-  }
+    .cabecalho-lista {
+        flex-wrap: wrap; /* Quebra de linha para a lista */
+        justify-content: center;
+        gap: 15px; /* Espaçamento menor para caber mais itens */
+    }
 
-  section {
-    margin: 20px 15px;
-    padding: 20px;
-  }
+    .cabecalho-lista li a {
+        padding: 8px 12px;
+        font-size: 0.95rem;
+    }
 
-  .galeria-imagens img {
-    width: 100%;
-    max-width: 320px;
-    height: auto;
-  }
+    section {
+        margin: 30px 15px;
+        padding: 25px;
+    }
 
-  form.form-ong {
-    width: 100%;
-    padding: 0 10px;
-  }
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 25px;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .card-container {
+        flex-direction: column; /* Pilha as imagens em telas menores */
+        align-items: center;
+    }
+
+    .image-card {
+        width: 80%; /* Ocupa mais largura em telas menores */
+        max-width: 350px; /* Limita a largura máxima */
+    }
+
+    form.form-ong {
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+
+    #voltar-topo {
+        bottom: 20px;
+        right: 20px;
+        padding: 12px 15px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cabecalho-lista {
+        gap: 10px;
+    }
+
+    .cabecalho-lista li a {
+        padding: 6px 10px;
+        font-size: 0.9rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .image-card {
+        width: 95%;
+    }
 }

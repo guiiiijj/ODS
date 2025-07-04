@@ -1,130 +1,135 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Amigo Animal na Escola</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Amigo Animal na Escola</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
 <header class="cabecalho">
-  <div class="header">
-    <img class="logo" src="./img/tulipa-logo.png" alt="Logo da ONG" />
-    <nav>
-      <ul class="cabecalho-lista">
-        <li><a href="#central">Central de ONGs</a></li>
-        <li><a href="#relatos">Relatos</a></li>
-        <li><a href="#educacao">Educação</a></li>
-        <li><a href="#animais-vulneraveis">Animais Vulneráveis</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#mapa">Mapa</a></li>
-        <li><a href="#projeto">Projeto</a></li>
-      </ul>
-    </nav>
-  </div>
+    <div class="header">
+        <img class="logo" src="./img/tulipa-logo.png" alt="Logo da ONG" />
+        <nav>
+            <ul class="cabecalho-lista">
+                <li><a href="#central">Central de ONGs</a></li>
+                <li><a href="#relatos">Relatos</a></li>
+                <li><a href="#educacao">Educação</a></li>
+                <li><a href="#animais-vulneraveis">Animais Vulneráveis</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#mapa">Mapa</a></li>
+                <li><a href="#projeto">Projeto</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
 <main>
 
-  <!-- Central de ONGs com formulário aprimorado -->
-  <section class="central" id="central">
-    <h2>Central de ONGs</h2>
-    <p>Cadastre sua ONG para ajudar na causa dos animais em Londrina e região.</p>
-    
-    <form action="#" method="post" class="form-ong">
-      <div class="form-grid">
-        <div>
-          <label for="nome-ong">Nome da ONG:</label>
-          <input type="text" id="nome-ong" name="nome-ong" placeholder="Nome da ONG" required />
+    <section class="central" id="central">
+        <h2>Central de ONGs</h2>
+        <p>Cadastre sua ONG para ajudar na causa dos animais em Londrina e região.</p>
+
+        <form action="#" method="post" class="form-ong card-form">
+            <div class="form-grid">
+                <div>
+                    <label for="nome-ong">Nome da ONG:</label>
+                    <input type="text" id="nome-ong" name="nome-ong" placeholder="Nome da ONG" required />
+                </div>
+
+                <div>
+                    <label for="contato-ong">Contato (telefone, e-mail):</label>
+                    <input type="text" id="contato-ong" name="contato-ong" placeholder="Telefone, e-mail ou redes sociais" required />
+                </div>
+
+                <div>
+                    <label for="endereco-ong">Endereço:</label>
+                    <input type="text" id="endereco-ong" name="endereco-ong" placeholder="Rua, número, bairro, cidade" required />
+                </div>
+
+                <div>
+                    <label for="area-atuacao">Área de atuação:</label>
+                    <input type="text" id="area-atuacao" name="area-atuacao" placeholder="Exemplo: Adoção, resgate, conscientização" required />
+                </div>
+            </div>
+
+            <label for="missao-ong">Missão da ONG:</label>
+            <textarea id="missao-ong" name="missao-ong" placeholder="Descreva a missão da ONG" required></textarea>
+
+            <button type="submit" class="botao">Enviar Cadastro</button>
+        </form>
+    </section>
+
+    <section class="relatos" id="relatos">
+        <h2>Relatos e Interconexão de Dados</h2>
+        <p>Relate avistamentos de animais perdidos, abandonados ou encontrados. Nosso sistema usa georreferenciamento para mapear e cruzar informações, garantindo uma resposta rápida e eficaz.</p>
+    </section>
+
+    <section class="educacao" id="educacao">
+        <h2>Material Didático Interativo</h2>
+        <div class="info-box box-gradient">
+            <h3>Para Professores</h3>
+            <p>Planos de aula detalhados com fichas de atividades, exercícios e sugestões para trabalhar a conscientização sobre os cuidados animais.</p>
+            <a href="#" class="botao">Acessar Planos de Aula</a>
         </div>
-        
-        <div>
-          <label for="contato-ong">Contato (telefone, e-mail):</label>
-          <input type="text" id="contato-ong" name="contato-ong" placeholder="Telefone, e-mail ou redes sociais" required />
+        <div class="info-box box-gradient">
+            <h3>Para Alunos</h3>
+            <p>Jogos e filmes educativos para crianças de 6 a 14 anos, estimulando o respeito e cuidado com os animais.</p>
+            <a href="#" class="botao">Ver Jogos e Filmes</a>
         </div>
-        
-        <div>
-          <label for="endereco-ong">Endereço:</label>
-          <input type="text" id="endereco-ong" name="endereco-ong" placeholder="Rua, número, bairro, cidade" required />
+    </section>
+
+    <section class="abandono-imagens" id="abandono-imagens">
+        <h2>Animais nas ruas: uma realidade visível</h2>
+        <div class="card-container">
+            <div class="image-card">
+                <img src="img/galeria-3-abandono-3.jpg" alt="Animal Abandonado">
+            </div>
+            <div class="image-card">
+                <img src="img/Cachorro-e-abandonado-no-Centro-de-Londrina0316451501202202102029.webp" alt="Animal Abandonado">
+            </div>
+            <div class="image-card">
+                <img src="img/ANIMAIS-ABANDONADOS-PELAS-COMUNIDADES-SELMA-SOUZA-4-scaled.jpg" alt="Animal Abandonado">
+            </div>
+            <div class="image-card">
+                <img src="img/auuuuuuuuuuu.jpeg" alt="Animal Abandonado">
+            </div>
+            <div class="image-card">
+                <img src="img/fdfnnjv.jpeg" alt="Animal Abandonado">
+            </div>
         </div>
-        
-        <div>
-          <label for="area-atuacao">Área de atuação:</label>
-          <input type="text" id="area-atuacao" name="area-atuacao" placeholder="Exemplo: Adoção, resgate, conscientização" required />
-        </div>
-      </div>
+    </section>
 
-      <label for="missao-ong">Missão da ONG:</label>
-      <textarea id="missao-ong" name="missao-ong" placeholder="Descreva a missão da ONG" required></textarea>
+    <section class="servicos" id="servicos">
+        <h2>Serviços e Dicas</h2>
+        <ul class="list-styled">
+            <li><strong>Clínicas e Hospitais Veterinários:</strong> Atendimento e cuidados para seus animais.</li>
+            <li><strong>Empresas Pet-Friendly:</strong> Locais que aceitam e acolhem seus pets com carinho.</li>
+            <li><strong>Dicas de Cuidados:</strong> Alimentação, vacinação, banho e primeiros socorros.</li>
+        </ul>
+        <a href="#" class="botao">Ver Lista Completa</a>
+    </section>
 
-      <button type="submit" class="botao">Enviar Cadastro</button>
-    </form>
-  </section>
+    <section class="mapa" id="mapa">
+        <h2>Mapa das ONGs em Londrina-PR</h2>
+        <iframe src="https://www.google.com/maps/d/embed?mid=1dnr49ZvS_w6MJqz-xUCcj_BhVz3ZB3Y&ehbc=2E312F" width="100%" height="480"></iframe>
+    </section>
 
-  <!-- Relatos e interconexão -->
-  <section class="relatos" id="relatos">
-    <h2>Relatos e Interconexão de Dados</h2>
-    <p>Relate avistamentos de animais perdidos, abandonados ou encontrados. Nosso sistema usa georreferenciamento para mapear e cruzar informações, garantindo uma resposta rápida e eficaz.</p>
-  </section>
+    <section class="projeto" id="projeto">
+        <h2>Sobre o Projeto</h2>
+        <p>“Amigo Animal na Escola” busca reduzir o abandono de animais com ações educativas, sociais e ambientais, focadas em crianças de 6 a 14 anos, escolas, ONGs e comunidade.</p>
+        <p>Unimos forças para formar uma geração mais consciente e responsável pelo cuidado animal.</p>
+    </section>
 
-  <!-- Material Didático Interativo -->
-  <section class="educacao" id="educacao">
-    <h2>Material Didático Interativo</h2>
-    <div class="info-box">
-      <h3>Para Professores</h3>
-      <p>Planos de aula detalhados com fichas de atividades, exercícios e sugestões para trabalhar a conscientização sobre os cuidados animais.</p>
-      <a href="#" class="botao">Acessar Planos de Aula</a>
-      <h3>Para Alunos</h3>
-      <p>Jogos e filmes educativos para crianças de 6 a 14 anos, estimulando o respeito e cuidado com os animais.</p>
-      <a href="#" class="botao">Ver Jogos e Filmes</a>
-    </div>
-  </section>
-
-  <section class="abandono-imagens" id="abandono-imagens">
-    <h2>Animais nas ruas: uma realidade visível</h2>
-    <div class="card-container">
-      <img src="img/galeria-3-abandono-3.jpg" alt="Animal Abandonado">
-      <img src="img/Cachorro-e-abandonado-no-Centro-de-Londrina0316451501202202102029.webp" alt="Animal Abandonado">
-      <img src="img/ANIMAIS-ABANDONADOS-PELAS-COMUNIDADES-SELMA-SOUZA-4-scaled.jpg" alt="Animal Abandonado">
-      <img src="img/auuuuuuuuuuu.jpeg" alt="Animal Abandonado">
-      <img src="img/fdfnnjv.jpeg" alt="Animal Abandonado">
-    </div>
-  </section>
-
-  <!-- Serviços Importantes -->
-  <section class="servicos" id="servicos">
-    <h2>Serviços e Dicas</h2>
-    <ul>
-      <li><strong>Clínicas e Hospitais Veterinários:</strong> Atendimento e cuidados para seus animais.</li>
-      <li><strong>Empresas Pet-Friendly:</strong> Locais que aceitam e acolhem seus pets com carinho.</li>
-      <li><strong>Dicas de Cuidados:</strong> Alimentação, vacinação, banho e primeiros socorros.</li>
-    </ul>
-    <a href="#" class="botao">Ver Lista Completa</a>
-  </section>
-
- 
-  <section class="mapa" id="mapa">
-    <h2>Mapa das ONGs em Londrina-PR</h2>
-    <iframe src="https://www.google.com/maps/d/embed?mid=1dnr49ZvS_w6MJqz-xUCcj_BhVz3ZB3Y&ehbc=2E312F" width="100%" height="480"></iframe>
-  </section>
-
-  <!-- Sobre o Projeto -->
-  <section class="projeto" id="projeto">
-    <h2>Sobre o Projeto</h2>
-    <p>“Amigo Animal na Escola” busca reduzir o abandono de animais com ações educativas, sociais e ambientais, focadas em crianças de 6 a 14 anos, escolas, ONGs e comunidade.</p>
-    <p>Unimos forças para formar uma geração mais consciente e responsável pelo cuidado animal.</p>
-  </section>
-
-  <!-- Encerramento -->
-  <section class="encerramento">
-    <p>Juntos podemos construir uma sociedade que respeita e protege nossos amigos animais. Conte conosco!</p>
-  </section>
+    <section class="encerramento">
+        <p>Juntos podemos construir uma sociedade que respeita e protege nossos amigos animais. Conte conosco!</p>
+    </section>
 
 </main>
 
 <footer>
-  ThackathOn
+    ThackathOn
 </footer>
 
 <a id="voltar-topo" href="#">⬆ Voltar ao Topo</a>
