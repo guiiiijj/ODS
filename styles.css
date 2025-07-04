@@ -1,4 +1,4 @@
-/* === Reset básico === */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -11,26 +11,29 @@ html {
 
 body {
   font-family: Arial, sans-serif;
+  line-height: 1.6;
   background-color: #f5fff7;
   color: #2e3d2f;
-  padding-top: 100px; /* espaço para cabeçalho fixo */
-  line-height: 1.6;
+  padding-top: 100px;
 }
 
-/* === Cabeçalho fixo e visível === */
+/* Cabeçalho fixo */
 .cabecalho {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
   background-color: #256d3c;
-  color: white;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-  padding: 10px 30px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.header {
+  max-width: 1100px;
+  margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 1000;
+  padding: 10px 20px;
 }
 
 .logo {
@@ -45,26 +48,26 @@ body {
   box-shadow: 0 0 20px #a8d692;
 }
 
-nav ul {
+.cabecalho-lista {
   list-style: none;
   display: flex;
   gap: 20px;
 }
 
-nav ul li a {
+.cabecalho-lista li a {
   color: white;
   font-weight: bold;
   text-decoration: none;
   padding: 8px 12px;
   border-radius: 5px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
-nav ul li a:hover {
+.cabecalho-lista li a:hover {
   background-color: #3ca858;
 }
 
-/* === Seções principais com fundo diferenciado e borda arredondada === */
+/* Seções */
 section {
   max-width: 1100px;
   margin: 40px auto;
@@ -73,43 +76,26 @@ section {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Cores específicas para cada seção */
-.central {
-  background-color: #d4f5dd;
-}
-
-#relatos {
-  background-color: #f0fff5;
-}
-
-#educacao {
-  background-color: #d4e9d0;
-}
-
-#animais-vulneraveis {
-  background-color: #e3f5dc;
-}
-
-#servicos {
-  background-color: #c9e9b6;
-}
-
-#projeto {
-  background-color: #b8dfa4;
-}
-
+/* Cores de fundo diferentes */
+.central { background-color: #d4f5dd; }
+.relatos { background-color: #f0fff5; }
+.educacao { background-color: #d4e9d0; }
+.animais-vulneraveis { background-color: #e3f5dc; }
+.servicos { background-color: #c9e9b6; }
+.mapa { background-color: #b8dfa4; }
+.projeto { background-color: #a2cc8a; }
 .encerramento {
-  background-color: #a2cc8a;
+  background-color: #256d3c;
   color: white;
   text-align: center;
   padding: 20px;
-  margin-top: 40px;
+  font-weight: bold;
 }
 
-/* Títulos das seções */
+/* Títulos */
 h2 {
-  text-align: center;
   color: #256d3c;
+  text-align: center;
   margin-bottom: 25px;
   font-size: 2rem;
 }
@@ -121,32 +107,45 @@ p {
   text-align: center;
 }
 
-/* Formulário de cadastro ONG */
+/* Formulário ONG */
 form.form-ong {
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
+  font-size: 1rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
 }
 
 form label {
-  font-weight: bold;
-  margin-bottom: 5px;
-  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+  color: #256d3c;
 }
 
 form input[type="text"],
 form textarea {
-  padding: 10px;
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.8px solid #a8d5b9;
+  border-radius: 8px;
   font-size: 1rem;
-  border: 1px solid #a8d5b9;
-  border-radius: 5px;
+  transition: border-color 0.3s ease;
   resize: vertical;
 }
 
-form textarea {
-  min-height: 80px;
+form input[type="text"]:focus,
+form textarea:focus {
+  border-color: #3ca858;
+  outline: none;
+  box-shadow: 0 0 6px #3ca858;
 }
 
 form button.botao {
@@ -183,7 +182,7 @@ form button.botao:hover {
   background-color: #2e7b41;
 }
 
-/* Galeria de imagens Animais Vulneráveis */
+/* Galeria de imagens */
 .galeria-imagens {
   display: flex;
   flex-wrap: wrap;
@@ -207,8 +206,8 @@ form button.botao:hover {
   box-shadow: 0 6px 14px rgba(0,0,0,0.3);
 }
 
-/* Lista Serviços */
-#servicos ul {
+/* Lista serviços */
+.servicos ul {
   list-style-type: disc;
   margin-left: 30px;
   font-size: 1.1rem;
@@ -251,14 +250,14 @@ footer {
     padding-top: 140px;
   }
 
-  .cabecalho {
+  .header {
     flex-direction: column;
     align-items: center;
     gap: 10px;
     padding: 15px 20px;
   }
 
-  nav ul {
+  .cabecalho-lista {
     flex-direction: column;
     gap: 10px;
   }
