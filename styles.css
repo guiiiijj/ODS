@@ -310,6 +310,10 @@ form button.botao:hover {
     background: linear-gradient(to top left, #d0edd0, #e8fff0); /* Gradiente reverso no hover */
 }
 
+.encerramento p{
+  text-align: center;
+  color: white;
+}
 
 /* Lista serviços */
 .servicos ul {
@@ -353,7 +357,6 @@ footer {
     background-color: #256d3c;
     color: white;
     text-align: center;
-    text-emphasis-color: white;
     padding: 20px 0; /* Padding maior */
     font-weight: 600; /* Levemente mais negrito */
     margin-top: 50px; /* Margem superior maior */
