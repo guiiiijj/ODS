@@ -1,140 +1,90 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Amigo Animal na Escola</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header class="cabecalho">
-  <img class="logo" src="./img/tulipa-logo.png" alt="logo da empresa">
-  <ul class="cabecalho-lista">
-    <li class="cabecalho-lista-item"><a href="#central">Home</a></li>
-    <li class="cabecalho-lista-item"><a href="#abandono">Abandono</a></li>
-    <li class="cabecalho-lista-item"><a href="#integrantes">Integrantes</a></li>
-    <li class="cabecalho-lista-item"><a href="#ods">ODS</a></li>
-  </ul>
-</header> 
-
-<main>
-  <section class="central" id="central">
-    <h2>Central de ONGs e Animais Perdidos/Encontrados</h2>
-    <p>Este site é para o coração se conectar com os animais e suas famílias.</p>
-    <div class="info-box">
-      <h3>Cadastro de ONGs</h3>
-      <ul>
-        <li>Informações de contato (telefone, e-mail, redes sociais)</li>
-        <li>Endereço e horário de funcionamento</li>
-        <li>Missão e área de atuação</li>
-        <li>Animais disponíveis para adoção (com fotos, descrições e status de adoção)</li>
+  <header class="cabecalho">
+    <img class="logo" src="./img/tulipa-logo.png" alt="Logo da ONG">
+    <nav>
+      <ul class="cabecalho-lista">
+        <li class="cabecalho-lista-item"><a href="#central">Central de ONGs</a></li>
+        <li class="cabecalho-lista-item"><a href="#relatos">Relatos</a></li>
+        <li class="cabecalho-lista-item"><a href="#educacao">Educação</a></li>
+        <li class="cabecalho-lista-item"><a href="#servicos">Serviços</a></li>
+        <li class="cabecalho-lista-item"><a href="#projeto">Projeto</a></li>
       </ul>
-    </div>
-  </section>
+    </nav>
+  </header>
 
-  <section class="uds" id="ods">
-    <h2>ODS e Sustentabilidade</h2>
-    <div class="card-container">
-      <div class="card">
-        <div class="card-inner">
-          <div class="card-front">
-            <img src="img/ods3.png" alt="ODS 3">
-            <p>ODS 3 – Saúde e Bem-estar</p>
-          </div>
-          <div class="card-back">
-            <p>Assegurar uma vida saudável e promover o bem-estar para todos, em todas as idades.</p>
-          </div>
-        </div>
+  <main>
+
+    <!-- Central de ONGs -->
+    <section class="central" id="central">
+      <h2>Central de ONGs</h2>
+      <p>Conheça ONGs que atuam em Londrina no acolhimento e cuidado com animais. Cadastre-se e consulte informações completas.</p>
+      <div class="info-box">
+        <h3>Cadastro de ONGs</h3>
+        <p>ONGs podem se cadastrar informando missão, contatos, endereço e área de atuação.</p>
+        <h3>Perfil das ONGs</h3>
+        <p>Visualize perfis com fotos, animais disponíveis para adoção e status.</p>
+        <h3>Animais Perdidos e Encontrados</h3>
+        <p>Consulte ou cadastre animais perdidos e encontrados com ficha e localização aproximada.</p>
       </div>
-      <div class="card">
-        <div class="card-inner">
-          <div class="card-front">
-            <img src="img/ods4.png" alt="ODS 4">
-            <p>ODS 4 – Educação de Qualidade</p>
-          </div>
-          <div class="card-back">
-            <p>Garantir educação inclusiva e equitativa de qualidade, promovendo oportunidades de aprendizagem.</p>
-          </div>
-        </div>
+    </section>
+
+    <!-- Relatos e gestão de dados -->
+    <section id="relatos">
+      <h2>Relatos e Interconexão</h2>
+      <p>Ajude relatando onde viu um animal abandonado ou perdido. Os dados são gerenciados por um sistema com georreferenciamento e bloqueio para evitar duplicações.</p>
+      <p>As informações são cruzadas automaticamente com cadastros e relatos.</p>
+    </section>
+
+    <!-- Material Didático -->
+    <section id="educacao">
+      <h2>Material Didático Interativo</h2>
+      <div class="info-box">
+        <h3>Para Professores</h3>
+        <p>Acesse planos de aula prontos para trabalhar o tema com seus alunos, com fichas de atividades, exercícios e sugestões de debates.</p>
+        <a href="#" class="botao">Acessar Planos de Aula</a>
+        <h3>Para Alunos</h3>
+        <p>Jogos educativos e filmes sobre respeito e cuidado com os animais, desenvolvidos especialmente para o público de 6 a 14 anos.</p>
+        <a href="#" class="botao">Ver Jogos e Filmes</a>
       </div>
-      <div class="card">
-        <div class="card-inner">
-          <div class="card-front">
-            <img src="img/ods11.png" alt="ODS 11">
-            <p>ODS 11 – Cidades Sustentáveis</p>
-          </div>
-          <div class="card-back">
-            <p>Tornar as cidades inclusivas, seguras, resilientes e sustentáveis, inclusive para os animais.</p>
-          </div>
-        </div>
+    </section>
+
+    <!-- Serviços Importantes -->
+    <section id="servicos">
+      <h2>Serviços e Dicas</h2>
+      <div class="info-box">
+        <ul>
+          <li><strong>Clínicas e Hospitais Veterinários:</strong> locais onde você pode levar animais para atendimento.</li>
+          <li><strong>Empresas Pet-Friendly:</strong> espaços que aceitam animais.</li>
+          <li><strong>Dicas de Cuidados Animais:</strong> alimentação, saúde, banho e vacinas.</li>
+        </ul>
+        <a href="#" class="botao">Ver Lista Completa</a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="abandono" id="abandono">
-    <h2>O problema do abandono animal</h2>
-    <p>Milhares de animais são abandonados diariamente. Essa prática é cruel e pode ser combatida com educação, adoção responsável e políticas públicas. Precisamos agir juntos para mudar essa realidade!</p>
-    <p>Você pode ajudar: adote, compartilhe e denuncie maus-tratos!</p>
-  </section>
+    <!-- Sobre o Projeto -->
+    <section class="projeto" id="projeto">
+      <h2>Sobre o Projeto</h2>
+      <p>“Amigo Animal na Escola” busca reduzir o abandono de animais com educação, informação e ações sociais. Desenvolvido por jovens, o projeto é voltado a crianças de 6 a 14 anos e suas famílias.</p>
+      <p>Unimos escolas, ONGs e voluntários para construir uma comunidade mais consciente.</p>
+    </section>
 
-  <section class="abandono-imagens" id="abandono-imagens">
-    <h2>Animais nas ruas: uma realidade visível</h2>
-    <div class="card-container">
-      <img src="img/abandono1.jpg" alt="Animal Abandonado">
-      <img src="img/abandono2.jpg" alt="Animal Abandonado">
-      <img src="img/abandono3.jpg" alt="Animal Abandonado">
-      <img src="img/abandono4.jpg" alt="Animal Abandonado">
-    </div>
-  </section>
+    <!-- Encerramento -->
+    <section class="encerramento">
+      <h2>Encerramento</h2>
+      <p>Com este site, esperamos conscientizar a sociedade e diminuir os índices de abandono, fortalecendo a vida terrestre com ações locais alinhadas aos princípios da comunidade sustentável.</p>
+    </section>
 
-  <section class="solucao" id="solucao">
-    <h2>Solução: Educação e Conscientização</h2>
-    <p>Acreditamos que a educação é o caminho para mudar o comportamento das futuras gerações. Campanhas escolares, rodas de conversa e oficinas sobre responsabilidade animal são ações fundamentais.</p>
-  </section>
-
-  <section class="proposta" id="proposta">
-    <h2>Proposta Principal</h2>
-    <p>A criação de uma plataforma que conecta ONGs, famílias adotantes e voluntários. A Central de ONGs será um canal direto entre a comunidade e os abrigos da cidade.</p>
-  </section>
-
-  <section class="mapa" id="mapa">
-    <h2>Mapa das ONGs em Londrina-PR</h2>
-    <iframe src="https://www.google.com/maps/d/embed?mid=1dnr49ZvS_w6MJqz-xUCcj_BhVz3ZB3Y&ehbc=2E312F" width="100%" height="480"></iframe>
-  </section>
-
-  <section class="publico" id="publico">
-    <h2>Público-Alvo</h2>
-    <p>Nosso projeto é voltado para crianças e adolescentes entre 6 e 14 anos, estudantes da rede escolar, com atividades adaptadas para cada faixa etária.</p>
-  </section>
-
-  <section class="integrantes" id="integrantes">
-    <h2>Integrantes do Projeto</h2>
-    <div class="card-container">
-      <div class="card">
-        <img src="img/integrante1.jpg" alt="Integrante 1">
-        <p>Nome do Integrante 1</p>
-      </div>
-      <div class="card">
-        <img src="img/integrante2.jpg" alt="Integrante 2">
-        <p>Nome do Integrante 2</p>
-      </div>
-      <div class="card">
-        <img src="img/integrante3.jpg" alt="Integrante 3">
-        <p>Nome do Integrante 3</p>
-      </div>
-      <div class="card">
-        <img src="img/integrante4.jpg" alt="Integrante 4">
-        <p>Nome do Integrante 4</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="encerramento" id="encerramento">
-    <h2>Encerramento</h2>
-    <p>O projeto “Amigo Animal na Escola” pretende reduzir o abandono de animais através da conscientização, da educação e da colaboração com as ONGs da cidade. Está alinhado com os objetivos da ODS 3, 4 e 11 e busca criar um futuro mais justo para todos — humanos e animais.</p>
-  </section>
-</main>
+    <a id="voltar-topo" href="#">⬆ Voltar ao Topo</a>
+  </main>
 
 </body>
 </html>
