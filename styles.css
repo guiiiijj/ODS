@@ -48,7 +48,6 @@ body {
 
 /* === Cabeçalho fixo === */
 .header {
-  position: fixed;
   width: 100%;
   background-color: #04b31c; /* verde forte */
   color: white;
