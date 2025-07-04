@@ -46,22 +46,38 @@ body {
   color: #fff;
 }
 
-/* === Cabeçalho fixo === */
+.cabecalho{
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-around;
+    padding: 24px 0;
+}
+
 .header {
-  width: 100%;
-  background-color: #04b31c; /* verde forte */
-  color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #f5fff5;
+    color: rgb(255, 240, 240);
+    text-align: right;
+    padding: 10px 0;
+    z-index: 1000;
 }
 
-.header h1 {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
+.logo{
+    float:inline-start;
+    border-radius: 50%;
+    box-shadow: #bfe79f 0px 0px 10px;
+    transition: 0.5s;
+    width: 3%;
+    border-radius: 22px;
+    height: 3%;
 }
 
-.header p {
-  font-size: 1rem;
-  font-style: italic;
+.logo:hover {
+    transition: 0.5s;
+    box-shadow: #a8d692 0px 0px 20px;
 }
 
 /* === Seções gerais === */
